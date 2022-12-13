@@ -1,0 +1,117 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": "unbound",
+            "keys": "alt+shift+minus"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+plus"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+down"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+left"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+right"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+up"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+down"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+left"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+right"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+up"
+        }
+    ],
+    "centerOnLaunch": true,
+    "confirmCloseAllTabs": false,
+    "defaultProfile": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+    "disableAnimations": true,
+    "disabledProfileSources": 
+    [
+        "Windows.Terminal.Azure"
+    ],
+    "initialCols": 90,
+    "initialRows": 30,
+    "launchMode": "focus",
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "bellStyle": "none",
+            "colorScheme": "Catppuccin Mocha",
+            "cursorShape": "filledBox",
+            "font": 
+            {
+                "face": "InputMono NF"
+            },
+            "padding": "5",
+            "scrollbarState": "hidden"
+        },
+        "list": 
+        [
+            {
+                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+                "name": "Arch",
+                "source": "Windows.Terminal.Wsl",
+                "commandline": "wsl.exe ~ -d Arch -u penguin"
+            },
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe",
+            },
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "Command Prompt",
+                "commandline": "cmd.exe",
+            }
+        ]
+    },
+    "schemes": 
+        {
+            "background": "#1E1E2E",
+            "black": "#45475A",
+            "blue": "#89B4FA",
+            "brightBlack": "#585B70",
+            "brightBlue": "#89B4FA",
+            "brightCyan": "#94E2D5",
+            "brightGreen": "#A6E3A1",
+            "brightPurple": "#F5C2E7",
+            "brightRed": "#F38BA8",
+            "brightWhite": "#A6ADC8",
+            "brightYellow": "#F9E2AF",
+            "cursorColor": "#F5E0DC",
+            "cyan": "#94E2D5",
+            "foreground": "#CDD6F4",
+            "green": "#A6E3A1",
+            "name": "Catppuccin Mocha",
+            "purple": "#F5C2E7",
+            "red": "#F38BA8",
+            "selectionBackground": "#F5E0DC",
+            "white": "#BAC2DE",
+            "yellow": "#F9E2AF"
+        },
+    ]
+}
