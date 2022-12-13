@@ -1,0 +1,14 @@
+add_newline = false
+
+format = "$username$hostname$shlvl$directory$git_branch$git_status$character"
+
+[character]
+success_symbol = "[](bold green)"
+error_symbol = "[](bold red)"
+
+[directory]
+style = "blue"
+
+[git_branch]
+style = "yellow"
+symbol = " "
