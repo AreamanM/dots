@@ -1,0 +1,67 @@
+{
+    // Disable workspace trust(it's very annoying).
+    "security.workspace.trust.enabled": false,
+    
+    // Open the settings.json file instead of the settings UI when opening settings.
+    "workbench.settings.editor": "json",
+    // Disable the activity bar that appears on the(by default) left, can be toggled with `ctrl-b`
+    "workbench.activityBar.visible": false,
+    // Do not show a message when opening an untitled file.
+    "workbench.editor.untitled.hint": "hidden",
+    // Just show a blank workbench upon editor startup.
+    "workbench.startupEditor": "none",
+
+    // Use the Iosevka font face.
+    "editor.fontFamily": "Iosevka",
+    // Render font ligatures.
+    "editor.fontLigatures": true,
+    // Set the font size to 16 pixels.
+    "editor.fontSize": 16,
+    // Disable the file minimap that appears in the(by default) top right corner.
+    "editor.minimap.enabled": false,
+    // Disable the margin beside the number line which is used for rendering things like debug breakpoints.
+    "editor.glyphMargin": false,
+    // Disable code folding(and hence the margin that appears to display folds).
+    "editor.folding": false,
+    // Disable line numbers
+    "editor.lineNumbers": "off",
+    // Do not render the newline at the end of the file.
+    "editor.renderFinalNewline": false,
+    // Do not highlight occurences of the word under the cursor.
+    "editor.occurrencesHighlight": false,
+    // Do not allow scrolling beyond the last line in a file.
+    "editor.scrollBeyondLastLine": false,
+    // Use different colours for different bracket pairs.
+    "editor.bracketPairColorization.enabled": true,
+    // Hide the horizontal scrollbar which is displayed at the bottom
+    "editor.scrollbar.horizontal": "hidden",
+    // Hide the vertical scrollbar which is displayed towards the right
+    "editor.scrollbar.vertical": "hidden",
+
+    // Hide the menu bar that appears below the titlebar, it can be toggled using the `alt` key.
+    "window.menuBarVisibility": "toggle",
+    // Set the format of the window title.
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
+    // Do not restore any windows when the editor is restarted.
+    "window.restoreWindows": "none",
+
+    // Use unix line endings on new files.
+    "files.eol": "\n",
+    // Insert a final newline if it is not present upon saving.
+    "files.insertFinalNewline": true,
+
+    // Do not enter fullscreen in zen mode.
+    "zenMode.fullScreen": false,
+    // Do not hide the statusbar in zen mode.
+    "zenMode.hideStatusBar": false,
+    // Do not centre the layout in zen mode.
+    // "zenMode.centerLayout": false,
+
+    // Use the system clibpoard when copying/pasting things using vim mode.
+    "vim.useSystemClipboard": true,
+    // Do not handle the <control-b> key combination when using vim mode.
+    "vim.handleKeys": { "<C-b>": false },
+
+    // Disable the file path which appears below the tab.
+    "breadcrumbs.enabled": false,
+}
