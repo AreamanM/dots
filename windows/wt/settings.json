@@ -66,6 +66,7 @@
             {
                 "face": "InputMono NF"
             },
+            "intenseTextStyle": "all",
             "padding": "5",
             "scrollbarState": "hidden"
         },
