@@ -13,3 +13,6 @@ vim.o.softtabstop = 2
 -- Line numbers
 vim.o.number = true
 vim.o.relativenumber = true
+
+-- Colors
+vim.o.termguicolors = true
