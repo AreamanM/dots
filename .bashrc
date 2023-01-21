@@ -14,6 +14,7 @@ alias nvimfzf='nvim $(fzf)'
 # This should be default
 HISTCONTROL=ignoredups
 
+[ -d "$HOME/.dotnet/tools" ] && PATH="$HOME/.dotnet/tools:$PATH"
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 export PATH
 
