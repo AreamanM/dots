@@ -64,55 +64,94 @@
             "cursorShape": "filledBox",
             "font": 
             {
-                "face": "InputMono NF"
+                "face": "VictorMono NF",
+				"size": 12 // <- default
             },
-            "intenseTextStyle": "all",
+			"intenseTextStyle": "all",
             "padding": "5",
             "scrollbarState": "hidden"
         },
         "list": 
         [
             {
-                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
-                "name": "Arch",
-                "source": "Windows.Terminal.Wsl",
-                "commandline": "wsl.exe ~ -d Arch -u penguin"
-            },
-            {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "name": "Windows PowerShell",
-                "commandline": "powershell.exe",
+                "name": "Windows PowerShell"
             },
             {
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "name": "Command Prompt",
-                "commandline": "cmd.exe",
+                "hidden": true,
+                "name": "Command Prompt"
+            },
+            {
+                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+                "hidden": false,
+                "name": "Arch",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{e04c2fbd-72a8-5529-b816-56a7b32be7f1}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{31a0ac65-fd75-5fab-a085-f350cef1977d}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
     "schemes": 
-        {
-            "background": "#1E1E2E",
-            "black": "#45475A",
-            "blue": "#89B4FA",
-            "brightBlack": "#585B70",
-            "brightBlue": "#89B4FA",
-            "brightCyan": "#94E2D5",
-            "brightGreen": "#A6E3A1",
-            "brightPurple": "#F5C2E7",
-            "brightRed": "#F38BA8",
-            "brightWhite": "#A6ADC8",
-            "brightYellow": "#F9E2AF",
-            "cursorColor": "#F5E0DC",
-            "cyan": "#94E2D5",
-            "foreground": "#CDD6F4",
-            "green": "#A6E3A1",
-            "name": "Catppuccin Mocha",
-            "purple": "#F5C2E7",
-            "red": "#F38BA8",
-            "selectionBackground": "#F5E0DC",
-            "white": "#BAC2DE",
-            "yellow": "#F9E2AF"
-        },
+    [
+		{
+		  "name": "base16-standardized-dark",
+		  "background":    "#222222",
+		  "foreground":    "#c0c0c0",
+		  "black":         "#222222",
+		  "red":           "#e15d67",
+		  "green":         "#5db129",
+		  "yellow":        "#e1b31a",
+		  "blue":          "#00a3f2",
+		  "purple":        "#b46ee0",
+		  "cyan":          "#21c992",
+		  "white":         "#c0c0c0",
+		  "brightBlack":   "#898989",
+		  "brightRed":     "#fc804e",
+		  "brightGreen":   "#303030",
+		  "brightYellow":  "#555555",
+		  "brightBlue":    "#898989",
+		  "brightPurple":  "#e0e0e0",
+		  "brightCyan":    "#b87d28",
+		  "brightWhite":   "#ffffff"
+
+		},
+		{
+		  "name": "Catppuccin Mocha",
+
+		  "cursorColor": "#F5E0DC",
+		  "selectionBackground": "#585B70",
+
+		  "background": "#1E1E2E",
+		  "foreground": "#CDD6F4",
+
+		  "black": "#45475A",
+		  "red": "#F38BA8",
+		  "green": "#A6E3A1",
+		  "yellow": "#F9E2AF",
+		  "blue": "#89B4FA",
+		  "purple": "#F5C2E7",
+		  "cyan": "#94E2D5",
+		  "white": "#BAC2DE",
+
+		  "brightBlack": "#585B70",
+		  "brightRed": "#F38BA8",
+		  "brightGreen": "#A6E3A1",
+		  "brightYellow": "#F9E2AF",
+		  "brightBlue": "#89B4FA",
+		  "brightPurple": "#F5C2E7",
+		  "brightCyan": "#94E2D5",
+		  "brightWhite": "#A6ADC8"
+		}
     ]
 }
