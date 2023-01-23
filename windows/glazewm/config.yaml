@@ -1,0 +1,216 @@
+gaps:
+  inner_gap: 20
+  outer_gap: 20
+
+bar:
+  height: 20
+  position: "top"
+  opacity: 1.0
+  background: "#11111b"
+  foreground: "white"
+  font_family: "JetBrainsMono NF"
+  font_size: "13"
+  padding: "1 6 1 0"
+  font_weight: "600"
+  components_left:
+    - type: "workspaces"
+      focused_workspace_background: "#fab387"
+      focused_workspace_foreground: "#11111b"
+      default_workspace_background: "#11111b"
+  components_right:
+  
+    # Clock
+    - type: "text"
+      text: ""
+      foreground: "#a6e3a1"
+      background: "#11111b"
+     
+    - type: "clock"
+      time_formatting: " hh:mm tt"
+      foreground: "#11111b"
+      background: "#a6e3a1"
+      
+    - type: "text"
+      text: " "
+      foreground: "#a6e3a1"
+      background: "#11111b"
+
+    # Battery
+    - type: "text"
+      text: ""
+      foreground: "#f9e2af"
+      background: "#11111b"
+      
+    - type: "battery"
+      charging: " {battery_level}"
+      draining: " {battery_level}"
+      power_saver: " {battery_level}"
+      foreground: "#11111b"
+      background: "#f9e2af"
+      
+    - type: "text"
+      text: ""
+      foreground: "#f9e2af"
+      background: "#11111b"
+      
+    # Tiling direction
+    - type: "text"
+      text: " "
+      foreground: "#94e2d5"
+      background: "#11111b"
+      
+    - type: "tiling direction"
+      text_vertical: "⮁"
+      text_horizontal: "⮂"
+      foreground: "#11111b"
+      background: "#94e2d5"
+      
+    - type: "text"
+      text: ""
+      foreground: "#94e2d5"
+      background: "#11111b"
+
+workspaces:
+  - name: 1
+  - name: 2
+  - name: 3
+  - name: 4
+  - name: 5
+  - name: 6
+  - name: 7
+  - name: 8
+  - name: 9
+
+window_rules:
+  # Task Manager requires admin privileges to manage and should be ignored unless running
+  # the WM as admin.
+  - command: "ignore"
+    match_process_name: "Taskmgr"
+
+  # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
+  - command: "set floating"
+    match_class_name: "#32770"
+
+  # Some applications (eg. Steam) have borders that extend past the normal border size.
+  - command: "resize borders 0px -7px -7px -7px"
+    match_process_name: "steam"
+
+keybindings:
+  # Shift focus in a given direction.
+  - command: "focus left"
+    binding: "Alt+H"
+  - command: "focus right"
+    binding: "Alt+L"
+  - command: "focus up"
+    binding: "Alt+K"
+  - command: "focus down"
+    binding: "Alt+J"
+
+  # Move focused window in a given direction.
+  - command: "move left"
+    binding: "Alt+Shift+H"
+  - command: "move right"
+    binding: "Alt+Shift+L"
+  - command: "move up"
+    binding: "Alt+Shift+K"
+  - command: "move down"
+    binding: "Alt+Shift+J"
+
+  # Resize focused window by a percentage or pixel amount.
+  - command: "resize width -2%"
+    binding: "Alt+U"
+  - command: "resize width +2%"
+    binding: "Alt+P"
+  - command: "resize height +2%"
+    binding: "Alt+O"
+  - command: "resize height -2%"
+    binding: "Alt+I"
+
+  # Change layout direction to be either horizontal or vertical.
+  - command: "layout horizontal"
+    binding: "Alt+Shift+V"
+  - command: "layout vertical"
+    binding: "Alt+V"
+
+  # Change focus between floating / tiling windows.
+  - command: "toggle focus mode"
+    binding: "Alt+Space"
+
+  # Change the focused window to be floating / tiling.
+  - command: "toggle floating"
+    binding: "Alt+Shift+Space"
+
+  # Change the focused window to be maximized / unmaximized.
+  - command: "toggle maximized"
+    binding: "Alt+X"
+
+  # Minimize focused window.
+  - command: "set minimized"
+    binding: "Alt+M"
+
+  # Close focused window.
+  - command: "close"
+    binding: "Alt+Shift+Q"
+
+  # Kill GlazeWM process safely.
+  - command: "exit wm"
+    binding: "Alt+Shift+E"
+
+  # Re-evaluate configuration file.
+  - command: "reload config"
+    binding: "Alt+Shift+R"
+
+  # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
+  # to start Windows Terminal and Git Bash respectively.
+  - command: "exec cmd"
+    binding: "Alt+Enter"
+
+  # Focus the workspace that last had focus.
+  - command: "focus workspace recent"
+    binding: "Alt+R"
+
+  # Focus the next/previous workspace defined in `workspaces` config.
+  - command: "focus workspace next"
+    binding: "Alt+T"
+  - command: "focus workspace prev"
+    binding: "Alt+Shift+T"
+
+  # Change focus to a workspace defined in `workspaces` config.
+  - command: "focus workspace 1"
+    binding: "Alt+1"
+  - command: "focus workspace 2"
+    binding: "Alt+2"
+  - command: "focus workspace 3"
+    binding: "Alt+3"
+  - command: "focus workspace 4"
+    binding: "Alt+4"
+  - command: "focus workspace 5"
+    binding: "Alt+5"
+  - command: "focus workspace 6"
+    binding: "Alt+6"
+  - command: "focus workspace 7"
+    binding: "Alt+7"
+  - command: "focus workspace 8"
+    binding: "Alt+8"
+  - command: "focus workspace 9"
+    binding: "Alt+9"
+
+  # Move focused window to a workspace defined in `workspaces` config.
+  - commands: ["move to workspace 1", "focus workspace 1"]
+    binding: "Alt+Shift+1"
+  - commands: ["move to workspace 2", "focus workspace 2"]
+    binding: "Alt+Shift+2"
+  - commands: ["move to workspace 3", "focus workspace 3"]
+    binding: "Alt+Shift+3"
+  - commands: ["move to workspace 4", "focus workspace 4"]
+    binding: "Alt+Shift+4"
+  - commands: ["move to workspace 5", "focus workspace 5"]
+    binding: "Alt+Shift+5"
+  - commands: ["move to workspace 6", "focus workspace 6"]
+    binding: "Alt+Shift+6"
+  - commands: ["move to workspace 7", "focus workspace 7"]
+    binding: "Alt+Shift+7"
+  - commands: ["move to workspace 8", "focus workspace 8"]
+    binding: "Alt+Shift+8"
+  - commands: ["move to workspace 9", "focus workspace 9"]
+    bindings: ["Alt+Shift+9"]
