@@ -6,69 +6,108 @@ bar:
   height: 20
   position: "top"
   opacity: 1.0
-  background: "#11111b"
+  background: "#1e1e2e"
   foreground: "white"
   font_family: "JetBrainsMono NF"
   font_size: "13"
   padding: "1 6 1 0"
   font_weight: "600"
+  #component_separators:
+    #default: ""
   components_left:
     - type: "workspaces"
       focused_workspace_background: "#fab387"
-      focused_workspace_foreground: "#11111b"
-      default_workspace_background: "#11111b"
+      focused_workspace_foreground: "#1e1e2e"
+      default_workspace_background: "#1e1e2e"
+      default_workspace_foreground: "#cdd6f4"
   components_right:
   
-    # Clock
+    ### CLOCK
     - type: "text"
       text: ""
       foreground: "#a6e3a1"
-      background: "#11111b"
+      background: "#1e1e2e"
      
     - type: "clock"
       time_formatting: " hh:mm tt"
-      foreground: "#11111b"
+      foreground: "#1e1e2e"
       background: "#a6e3a1"
       
     - type: "text"
       text: " "
       foreground: "#a6e3a1"
-      background: "#11111b"
-
-    # Battery
+      background: "#1e1e2e"
+      
+    # ### MEDIA
+    # - type: "text"
+      # text: " "
+      # foreground: "#eba0ac"
+      # background: "#1e1e2e"
+      
+    # - type: "media"
+      # media_playing: " {title}"
+      # foreground: "#1e1e2e"
+      # background: "#eba0ac"
+      
+    # - type: "text"
+      # text:s ""
+      # foreground: "#eba0ac"
+      # background: "#1e1e2e"
+      
+      
+    ### BATTERY
     - type: "text"
       text: ""
       foreground: "#f9e2af"
-      background: "#11111b"
+      background: "#1e1e2e"
       
     - type: "battery"
       charging: " {battery_level}"
       draining: " {battery_level}"
       power_saver: " {battery_level}"
-      foreground: "#11111b"
+      foreground: "#1e1e2e"
       background: "#f9e2af"
       
     - type: "text"
       text: ""
       foreground: "#f9e2af"
-      background: "#11111b"
+      background: "#1e1e2e"
       
-    # Tiling direction
+            
+    ### VOLUME
     - type: "text"
       text: " "
-      foreground: "#94e2d5"
-      background: "#11111b"
+      foreground: "#f5c2e7"
+      background: "#1e1e2e"
+      
+    - type: "volume"
+      unmuted: " {volume}"
+      foreground: "#1e1e2e"
+      background: "#f5c2e7"
+      
+    - type: "text"
+      text: ""
+      foreground: "#f5c2e7"
+      background: "#1e1e2e"
+      
+    ### TILING DIRECTION
+    - type: "text"
+      text: " "
+      foreground: "#89b4fa"
+      background: "#1e1e2e"
       
     - type: "tiling direction"
       text_vertical: "⮁"
       text_horizontal: "⮂"
-      foreground: "#11111b"
-      background: "#94e2d5"
+      foreground: "#1e1e2e"
+      background: "#89b4fa"
       
     - type: "text"
       text: ""
-      foreground: "#94e2d5"
-      background: "#11111b"
+      foreground: "#89b4fa"
+      background: "#1e1e2e"
+
+
 
 workspaces:
   - name: 1
