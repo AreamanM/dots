@@ -9,7 +9,10 @@
 alias ls=exa
 
 # Convenience thing
-alias nvimfzf='nvim $(fzf)'
+#alias nvimfzf='nvim $(fzf)'
+
+# just testing
+alias nvimp='nvim $(fd | fzy -l15)'
 
 # This should be default
 HISTCONTROL=ignoredups
