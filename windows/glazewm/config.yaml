@@ -165,10 +165,7 @@ keybindings:
   - command: "resize height -2%"
     binding: "Alt+I"
 
-  # Change layout direction to be either horizontal or vertical.
-  - command: "layout horizontal"
-    binding: "Alt+Shift+V"
-  - command: "layout vertical"
+  - command: "tiling direction toggle"
     binding: "Alt+V"
 
   # Change focus between floating / tiling windows.
