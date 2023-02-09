@@ -6,106 +6,71 @@ bar:
   height: 20
   position: "top"
   opacity: 1.0
-  background: "#1e1e2e"
+  background: "#ffffff00"
   foreground: "white"
   font_family: "JetBrainsMono NF"
-  font_size: "13"
-  padding: "1 6 1 0"
-  font_weight: "600"
-  #component_separators:
-    #default: ""
+  font_size: "14"
+  padding: "1 6 1 6"
+  offset_x: 5
+  offset_y: 5
+  font_weight: "400"
   components_left:
     - type: "workspaces"
+      font_size: "13"
       focused_workspace_background: "#fab387"
       focused_workspace_foreground: "#1e1e2e"
       default_workspace_background: "#1e1e2e"
       default_workspace_foreground: "#cdd6f4"
   components_right:
   
-    ### CLOCK
     - type: "text"
       text: ""
-      foreground: "#a6e3a1"
-      background: "#1e1e2e"
+      foreground: "#1e1e2e"
+      background: "#ffffff00"
      
     - type: "clock"
       time_formatting: " hh:mm tt"
-      foreground: "#1e1e2e"
-      background: "#a6e3a1"
-      
-    - type: "text"
-      text: " "
       foreground: "#a6e3a1"
       background: "#1e1e2e"
       
-    # ### MEDIA
-    # - type: "text"
-      # text: " "
-      # foreground: "#eba0ac"
-      # background: "#1e1e2e"
-      
-    # - type: "media"
-      # media_playing: " {title}"
-      # foreground: "#1e1e2e"
-      # background: "#eba0ac"
-      
-    # - type: "text"
-      # text:s ""
-      # foreground: "#eba0ac"
-      # background: "#1e1e2e"
-      
-      
-    ### BATTERY
     - type: "text"
-      text: ""
-      foreground: "#f9e2af"
-      background: "#1e1e2e"
+      text: ""
+      foreground: "#1e1e2e"
+      background: "#ffffff00"
+
+    - type: "text"
+      text: " "
+      foreground: "#1e1e2e"
+      background: "#ffffff00"
       
     - type: "battery"
-      charging: " {battery_level}"
-      draining: " {battery_level}"
-      power_saver: " {battery_level}"
-      foreground: "#1e1e2e"
-      background: "#f9e2af"
-      
-    - type: "text"
-      text: ""
+      label_charging: "󰚥 {battery_level}"
+      label_draining: " {battery_level}"
+      label_power_saver: " {battery_level}"
       foreground: "#f9e2af"
       background: "#1e1e2e"
       
-            
-    ### VOLUME
-    - type: "text"
-      text: " "
-      foreground: "#f5c2e7"
-      background: "#1e1e2e"
-      
-    - type: "volume"
-      unmuted: " {volume}"
-      foreground: "#1e1e2e"
-      background: "#f5c2e7"
-      
     - type: "text"
       text: ""
-      foreground: "#f5c2e7"
-      background: "#1e1e2e"
+      foreground: "#1e1e2e"
+      background: "#ffffff00"
+
       
-    ### TILING DIRECTION
     - type: "text"
       text: " "
-      foreground: "#89b4fa"
-      background: "#1e1e2e"
+      foreground: "#1e1e2e"
+      background: "#ffffff00"
       
     - type: "tiling direction"
-      text_vertical: "⮁"
-      text_horizontal: "⮂"
-      foreground: "#1e1e2e"
-      background: "#89b4fa"
+      label_vertical: "⮁"
+      label_horizontal: "⮂"
+      foreground: "#74c7ec"
+      background: "#1e1e2e"
       
     - type: "text"
       text: ""
-      foreground: "#89b4fa"
-      background: "#1e1e2e"
+      foreground: "#1e1e2e"
+      background: "#ffffff00"
 
 
 
