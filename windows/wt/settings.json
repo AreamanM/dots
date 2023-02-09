@@ -64,8 +64,8 @@
             "cursorShape": "filledBox",
             "font": 
             {
-                "face": "VictorMono NF",
-				"size": 12 // <- default
+                "face": "Iosevka NF",
+				"size": 14// <- default
             },
 			"intenseTextStyle": "all",
             "padding": "5",
