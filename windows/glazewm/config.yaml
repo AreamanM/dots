@@ -3,7 +3,7 @@ gaps:
   outer_gap: 20
 
 bar:
-  height: 20
+  height: 21
   position: "top"
   opacity: 1.0
   background: "#ffffff00"
@@ -25,51 +25,52 @@ bar:
   
     - type: "text"
       text: ""
-      foreground: "#1e1e2e"
+      foreground: "#a6e3a1"
       background: "#ffffff00"
-     
+
     - type: "clock"
       time_formatting: " hh:mm tt"
-      foreground: "#a6e3a1"
-      background: "#1e1e2e"
-      
-    - type: "text"
-      text: ""
       foreground: "#1e1e2e"
-      background: "#ffffff00"
+      background: "#a6e3a1"
 
     - type: "text"
-      text: " "
-      foreground: "#1e1e2e"
+      text: " "
+      foreground: "#a6e3a1"
       background: "#ffffff00"
-      
+
+
+    - type: "text"
+      text: ""
+      foreground: "#f9e2af"
+      background: "#ffffff00"
+
     - type: "battery"
-      label_charging: "󰚥 {battery_level}"
+      label_charging: " {battery_level}"
       label_draining: " {battery_level}"
       label_power_saver: " {battery_level}"
-      foreground: "#f9e2af"
-      background: "#1e1e2e"
-      
+      foreground: "#1e1e2e"
+      background: "#f9e2af"
+
     - type: "text"
       text: ""
-      foreground: "#1e1e2e"
+      foreground: "#f9e2af"
       background: "#ffffff00"
 
-      
+
     - type: "text"
       text: " "
-      foreground: "#1e1e2e"
+      foreground: "#89b4fa"
       background: "#ffffff00"
-      
+
     - type: "tiling direction"
       label_vertical: "⮁"
       label_horizontal: "⮂"
-      foreground: "#74c7ec"
-      background: "#1e1e2e"
-      
+      foreground: "#1e1e2e"
+      background: "#89b4fa"
+
     - type: "text"
       text: ""
-      foreground: "#1e1e2e"
+      foreground: "#89b4fa"
       background: "#ffffff00"
 
 
