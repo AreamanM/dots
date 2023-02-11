@@ -22,7 +22,7 @@ packer.startup({
     {
       "nvim-treesitter/nvim-treesitter",
       event = "BufReadPre",
-      ft = {"c", "cpp", "lua", "rust", "haskell", "python", "cs"},
+      ft = {"c", "cpp", "lua", "rust", "haskell", "python", "cs", "markdown"},
       config = function()
         require("nvim-treesitter.configs").setup {
           highlight = {enable = true}
@@ -146,6 +146,15 @@ packer.startup({
             cmd = server == "omnisharp" and {"dotnet", "/home/penguin/.omnisharp/bin/OmniSharp.dll"} or nil,
           }
         end
+      end
+    },
+
+    {
+      "lervag/vimtex",
+      config = function()
+        vim.g.vimtex_quickfix_enabled = 0
+        vim.g.vimtex_view_general_viewer = "sumatrapdfwrapper"
+        vim.g.vimtex_view_general_options = "-reuse-instance @pdf"
       end
     },
 
