@@ -6,72 +6,39 @@ bar:
   height: 21
   position: "top"
   opacity: 1.0
-  background: "#ffffff00"
+  background: "#181616"
   foreground: "white"
   font_family: "JetBrainsMono NF"
   font_size: "14"
   padding: "1 6 1 6"
-  offset_x: 5
-  offset_y: 5
   font_weight: "400"
+  component_separator:
+    label: "  "
   components_left:
     - type: "workspaces"
-      font_size: "13"
-      focused_workspace_background: "#fab387"
-      focused_workspace_foreground: "#1e1e2e"
-      default_workspace_background: "#1e1e2e"
-      default_workspace_foreground: "#cdd6f4"
+      focused_workspace_background: "#181616"
+      focused_workspace_foreground: "#c4b28a"
+      default_workspace_background: "#181616"
+      default_workspace_foreground: "#c5c9c5"
   components_right:
   
-    - type: "text"
-      text: ""
-      foreground: "#a6e3a1"
-      background: "#ffffff00"
-
     - type: "clock"
       time_formatting: " hh:mm tt"
-      foreground: "#1e1e2e"
-      background: "#a6e3a1"
-
-    - type: "text"
-      text: " "
-      foreground: "#a6e3a1"
-      background: "#ffffff00"
-
-
-    - type: "text"
-      text: ""
-      foreground: "#f9e2af"
-      background: "#ffffff00"
+      foreground: "#c5c9c5"
+      background: "#181616"
 
     - type: "battery"
       label_charging: " {battery_level}"
       label_draining: " {battery_level}"
       label_power_saver: " {battery_level}"
-      foreground: "#1e1e2e"
-      background: "#f9e2af"
-
-    - type: "text"
-      text: ""
-      foreground: "#f9e2af"
-      background: "#ffffff00"
-
-
-    - type: "text"
-      text: " "
-      foreground: "#89b4fa"
-      background: "#ffffff00"
+      foreground: "#c5c9c5"
+      background: "#181616"
 
     - type: "tiling direction"
       label_vertical: "⮁"
       label_horizontal: "⮂"
-      foreground: "#1e1e2e"
-      background: "#89b4fa"
-
-    - type: "text"
-      text: ""
-      foreground: "#89b4fa"
-      background: "#ffffff00"
+      foreground: "#c5c9c5"
+      background: "#181616"
 
 
 
@@ -216,3 +183,4 @@ keybindings:
     binding: "Alt+Shift+8"
   - commands: ["move to workspace 9", "focus workspace 9"]
     bindings: ["Alt+Shift+9"]
+

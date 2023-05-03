@@ -1,5 +1,5 @@
 local packer = require("packer")
-local lsp_fts = {"rust", "python", "haskell", "cs"}
+local lsp_fts = {"rust", "python", "haskell", "cs", "racket"}
 
 packer.startup({
   {
@@ -12,7 +12,7 @@ packer.startup({
     {
       "catppuccin/nvim",
       as = "catppuccin",
-      -- disable = true,
+      disable = true,
       config = function()
         require("catppuccin").setup({flavour = "mocha"})
         vim.cmd.colorscheme("catppuccin")
@@ -20,9 +20,25 @@ packer.startup({
     },
 
     {
+      "rebelot/kanagawa.nvim",
+      -- disable = true,
+      config = function()
+        local kanagawa = require('kanagawa')
+        kanagawa.setup {
+          compile = true,             -- enable compiling the colorscheme
+          colors = {
+            theme = { all = { ui = { bg_gutter = "none" } } }
+          }
+        }
+        -- kanagawa.load("dragon")
+        vim.cmd("colorscheme kanagawa-dragon")
+      end
+    },
+
+    {
       "nvim-treesitter/nvim-treesitter",
       event = "BufReadPre",
-      ft = {"c", "cpp", "lua", "rust", "haskell", "python", "cs", "markdown"},
+      ft = {"c", "cpp", "lua", "rust", "haskell", "python", "cs", "markdown", "racket", "vimdoc"},
       config = function()
         require("nvim-treesitter.configs").setup {
           highlight = {enable = true}
@@ -118,7 +134,7 @@ packer.startup({
         vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
             vim.lsp.handlers.signature_help, {border = "single" }) 
 
-        for _, server in pairs({"rust_analyzer", "pyright", "hls", "omnisharp"}) do
+        for _, server in pairs({"rust_analyzer", "pyright", "hls", "omnisharp", "racket_langserver"}) do
 
           require("lspconfig")[server].setup {
             capabilities = require("cmp_nvim_lsp").default_capabilities(),
@@ -164,7 +180,7 @@ packer.startup({
       config = function()
         require("lualine").setup {
           options = {
-            theme = "catppuccin",
+            theme = "kanagawa",
             -- component_separators = { left = "", right = ""},
             --section_separators = { left = "", right = ""},
           },

@@ -60,14 +60,14 @@
         "defaults": 
         {
             "bellStyle": "none",
-            "colorScheme": "Catppuccin Mocha",
+            "colorScheme": "Kanagawa",
             "cursorShape": "filledBox",
             "font": 
             {
                 "face": "Iosevka NF",
-				"size": 14// <- default
+                "size": 14// <- default
             },
-			"intenseTextStyle": "all",
+            "intenseTextStyle": "all",
             "padding": "5",
             "scrollbarState": "hidden"
         },
@@ -89,69 +89,71 @@
                 "source": "Windows.Terminal.Wsl"
             },
             {
-                "guid": "{e04c2fbd-72a8-5529-b816-56a7b32be7f1}",
-                "hidden": false,
-                "name": "Developer Command Prompt for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
+              "guid": "{e04c2fbd-72a8-5529-b816-56a7b32be7f1}",
+              "hidden": false,
+              "name": "Developer Command Prompt for VS 2022",
+              "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "guid": "{31a0ac65-fd75-5fab-a085-f350cef1977d}",
-                "hidden": false,
-                "name": "Developer PowerShell for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
+              "guid": "{31a0ac65-fd75-5fab-a085-f350cef1977d}",
+              "hidden": false,
+              "name": "Developer PowerShell for VS 2022",
+              "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
     "schemes": 
     [
-		{
-		  "name": "base16-standardized-dark",
-		  "background":    "#222222",
-		  "foreground":    "#c0c0c0",
-		  "black":         "#222222",
-		  "red":           "#e15d67",
-		  "green":         "#5db129",
-		  "yellow":        "#e1b31a",
-		  "blue":          "#00a3f2",
-		  "purple":        "#b46ee0",
-		  "cyan":          "#21c992",
-		  "white":         "#c0c0c0",
-		  "brightBlack":   "#898989",
-		  "brightRed":     "#fc804e",
-		  "brightGreen":   "#303030",
-		  "brightYellow":  "#555555",
-		  "brightBlue":    "#898989",
-		  "brightPurple":  "#e0e0e0",
-		  "brightCyan":    "#b87d28",
-		  "brightWhite":   "#ffffff"
+      {
+        "background": "#181616",
+        "black": "#0d0c0c",
+        "blue": "#8ba4b0",
+        "brightBlack": "#727169",
+        "brightBlue": "#7FB4CA",
+        "brightCyan": "#7AA89F",
+        "brightGreen": "#98BB6C",
+        "brightPurple": "#938AA9",
+        "brightRed": "#E82424",
+        "brightWhite": "#DCD7BA",
+        "brightYellow": "#E6C384",
+        "cursorColor": "#C8C093",
+        "cyan": "#8ea4a2",
+        "foreground": "#c5c9c5",
+        "green": "#8a9a7b",
+        "name": "Kanagawa",
+        "purple": "#a292a3",
+        "red": "#c4746e",
+        "selectionBackground": "#2D4F67",
+        "white": "#C8C093",
+        "yellow": "#c4b28a"
+      },
 
-		},
-		{
-		  "name": "Catppuccin Mocha",
+      {
+        "name": "Catppuccin Mocha",
 
-		  "cursorColor": "#F5E0DC",
-		  "selectionBackground": "#585B70",
+        "cursorColor": "#F5E0DC",
+        "selectionBackground": "#585B70",
 
-		  "background": "#1E1E2E",
-		  "foreground": "#CDD6F4",
+        "background": "#1E1E2E",
+        "foreground": "#CDD6F4",
 
-		  "black": "#45475A",
-		  "red": "#F38BA8",
-		  "green": "#A6E3A1",
-		  "yellow": "#F9E2AF",
-		  "blue": "#89B4FA",
-		  "purple": "#F5C2E7",
-		  "cyan": "#94E2D5",
-		  "white": "#BAC2DE",
+        "black": "#45475A",
+        "red": "#F38BA8",
+        "green": "#A6E3A1",
+        "yellow": "#F9E2AF",
+        "blue": "#89B4FA",
+        "purple": "#F5C2E7",
+        "cyan": "#94E2D5",
+        "white": "#BAC2DE",
 
-		  "brightBlack": "#585B70",
-		  "brightRed": "#F38BA8",
-		  "brightGreen": "#A6E3A1",
-		  "brightYellow": "#F9E2AF",
-		  "brightBlue": "#89B4FA",
-		  "brightPurple": "#F5C2E7",
-		  "brightCyan": "#94E2D5",
-		  "brightWhite": "#A6ADC8"
-		}
+        "brightBlack": "#585B70",
+        "brightRed": "#F38BA8",
+        "brightGreen": "#A6E3A1",
+        "brightYellow": "#F9E2AF",
+        "brightBlue": "#89B4FA",
+        "brightPurple": "#F5C2E7",
+        "brightCyan": "#94E2D5",
+        "brightWhite": "#A6ADC8"
+      }
     ]
 }
