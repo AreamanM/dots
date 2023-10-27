@@ -1,5 +1,5 @@
 local packer = require("packer")
-local lsp_fts = {"rust", "python", "haskell", "cs", "racket"}
+local lsp_fts = {"rust", "python", "haskell", "cs", "tex"}
 
 packer.startup({
   {
@@ -38,7 +38,7 @@ packer.startup({
     {
       "nvim-treesitter/nvim-treesitter",
       event = "BufReadPre",
-      ft = {"c", "cpp", "lua", "rust", "haskell", "python", "cs", "markdown", "racket", "vimdoc"},
+      ft = {"c", "cpp", "lua", "rust", "haskell", "python", "cs", "markdown", "vimdoc"},
       config = function()
         require("nvim-treesitter.configs").setup {
           highlight = {enable = true}
@@ -53,7 +53,7 @@ packer.startup({
         "nvim-lua/plenary.nvim",
         "kyazdani42/nvim-web-devicons"
       },
-      tag = "0.1.0",
+      tag = "0.1.2",
       config = function()
         local telescope = require("telescope")
         telescope.setup {
@@ -134,7 +134,7 @@ packer.startup({
         vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
             vim.lsp.handlers.signature_help, {border = "single" }) 
 
-        for _, server in pairs({"rust_analyzer", "pyright", "hls", "omnisharp", "racket_langserver"}) do
+        for _, server in pairs({"rust_analyzer", "pyright", "hls", "omnisharp", "texlab"}) do
 
           require("lspconfig")[server].setup {
             capabilities = require("cmp_nvim_lsp").default_capabilities(),
@@ -159,7 +159,7 @@ packer.startup({
 
               vim.keymap.set("n", "[R", vim.lsp.buf.references, {buffer = bufnr})
             end,
-            cmd = server == "omnisharp" and {"dotnet", "/home/penguin/.omnisharp/bin/OmniSharp.dll"} or nil,
+            cmd = server == "omnisharp" and {"mono", "/home/penguin/.omnisharp/OmniSharp.exe"} or nil,
           }
         end
       end
@@ -169,8 +169,7 @@ packer.startup({
       "lervag/vimtex",
       config = function()
         vim.g.vimtex_quickfix_enabled = 0
-        vim.g.vimtex_view_general_viewer = "sumatrapdfwrapper"
-        vim.g.vimtex_view_general_options = "-reuse-instance @pdf"
+        vim.g.vimtex_view_method = 'zathura'
       end
     },
 

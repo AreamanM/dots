@@ -8,8 +8,8 @@ bar:
   opacity: 1.0
   background: "#181616"
   foreground: "white"
-  font_family: "JetBrainsMono NF"
-  font_size: "14"
+  font_family: "JetBrainsMono nerd font"
+  font_size: "12"
   padding: "1 6 1 6"
   font_weight: "400"
   component_separator:
@@ -20,17 +20,46 @@ bar:
       focused_workspace_foreground: "#c4b28a"
       default_workspace_background: "#181616"
       default_workspace_foreground: "#c5c9c5"
+      
+    # - type: "system tray"
+      # label_expand_text: " "
+      # label_collapse_text: " "
+      # foreground: "#c5c9c5"
+      # background: "#181616"
+      
   components_right:
   
     - type: "clock"
-      time_formatting: " hh:mm tt"
+      time_formatting: " hh:mm tt"
+      foreground: "#c5c9c5"
+      background: "#181616"
+      
+    - type: "cpu"
+      label: "CPU: {percent_usage}%"
+      # How often this counter is refreshed.
+      refresh_interval_ms: 1000
+      foreground: "#c5c9c5"
+      background: "#181616"
+      
+    - type: "memory"
+      label: "RAM: {percent_usage}%"
+      # How often this counter is refreshed.
+      refresh_interval_ms: 1000
+      foreground: "#c5c9c5"
+      background: "#181616"
+      
+    - type: "volume"
+      label_low: "volume: {volume_level}%"
+      label_medium: "volume: {volume_level}%"
+      label_high: "volume: {volume_level}%"
+      label_mute: "volume: {volume_level}%"
       foreground: "#c5c9c5"
       background: "#181616"
 
     - type: "battery"
-      label_charging: " {battery_level}"
-      label_draining: " {battery_level}"
-      label_power_saver: " {battery_level}"
+      label_charging: "battery: {battery_level}% (charging)"
+      label_draining: "󰁼 {battery_level}"
+      label_power_saver: "{battery_level}%"
       foreground: "#c5c9c5"
       background: "#181616"
 
@@ -183,4 +212,3 @@ keybindings:
     binding: "Alt+Shift+8"
   - commands: ["move to workspace 9", "focus workspace 9"]
     bindings: ["Alt+Shift+9"]
-
