@@ -53,7 +53,7 @@
         "Windows.Terminal.Azure"
     ],
     "initialCols": 126,
-    "initialRows": 32,
+    "initialRows": 38,
     "launchMode": "focus",
     "newTabMenu": 
     [
@@ -66,7 +66,7 @@
         "defaults": 
         {
             "bellStyle": "none",
-            "colorScheme": "Kanagawa",
+            "colorScheme": "Flexoki",
             "cursorShape": "filledBox",
             "font": 
             {
@@ -94,6 +94,18 @@
                 "hidden": false,
                 "name": "Arch",
                 "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{25af60bc-658f-5084-b18c-e86cb85f33f1}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{dfa2a129-7a9a-5e1c-9c26-1ae1044271d6}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
@@ -144,7 +156,30 @@
             "selectionBackground": "#2D4F67",
             "white": "#C8C093",
             "yellow": "#C4B28A"
-        }
+        },
+		{
+			"background": "#100F0F",
+			"black": "#100F0F",
+			"blue": "#205EA6",
+			"brightBlack": "#575653",
+			"brightBlue": "#4385BE",
+			"brightCyan": "#3AA99F",
+			"brightGreen": "#879A39",
+			"brightPurple": "#8B7EC8",
+			"brightRed": "#D14D41",
+			"brightWhite": "#FFFCF0",
+			"brightYellow": "#D0A215",
+			"cursorColor": "#DAD8CE",
+			"cyan": "#24837B",
+			"foreground": "#E6E4D9",
+			"green": "#66800B",
+			"name": "Flexoki",
+			"purple": "#5E409D",
+			"red": "#AF3029",
+			"selectionBackground": "#CECDC3",
+			"white": "#F2F0E5",
+			"yellow": "#C19C00"
+		},
     ],
     "themes": []
 }
