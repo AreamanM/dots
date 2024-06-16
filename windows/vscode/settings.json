@@ -2,17 +2,17 @@
     // Disable workspace trust(it's very annoying).
     "security.workspace.trust.enabled": false,
     
+    // Do not show a message when opening an untitled file.
+    "workbench.editor.empty.hint": "hidden",
+    // Disable the activity bar that appears on the(by default) left, can be toggled with `ctrl-b`.
+    "workbench.activityBar.location": "hidden",
     // Open the settings.json file instead of the settings UI when opening settings.
     "workbench.settings.editor": "json",
-    // Disable the activity bar that appears on the(by default) left, can be toggled with `ctrl-b`
-    "workbench.activityBar.visible": false,
-    // Do not show a message when opening an untitled file.
-    "workbench.editor.untitled.hint": "hidden",
     // Just show a blank workbench upon editor startup.
     "workbench.startupEditor": "none",
 
-    // Use the Iosevka font face.
-    "editor.fontFamily": "Iosevka",
+    // Use the Input Mono font face.
+    "editor.fontFamily": "Input Mono",
     // Render font ligatures.
     "editor.fontLigatures": true,
     // Set the font size to 16 pixels.
@@ -26,9 +26,9 @@
     // Disable line numbers
     "editor.lineNumbers": "off",
     // Do not render the newline at the end of the file.
-    "editor.renderFinalNewline": false,
+    "editor.renderFinalNewline": "off",
     // Do not highlight occurences of the word under the cursor.
-    "editor.occurrencesHighlight": false,
+    "editor.occurrencesHighlight": "off",
     // Do not allow scrolling beyond the last line in a file.
     "editor.scrollBeyondLastLine": false,
     // Use different colours for different bracket pairs.
@@ -55,13 +55,17 @@
     // Do not hide the statusbar in zen mode.
     "zenMode.hideStatusBar": false,
     // Do not centre the layout in zen mode.
-    // "zenMode.centerLayout": false,
+    //"zenMode.centerLayout": false,
 
-    // Use the system clibpoard when copying/pasting things using vim mode.
+    // Use the system clipboard when copying/pasting things using vim mode.
     "vim.useSystemClipboard": true,
     // Do not handle the <control-b> key combination when using vim mode.
     "vim.handleKeys": { "<C-b>": false },
 
     // Disable the file path which appears below the tab.
     "breadcrumbs.enabled": false,
+
+    // Do not confirm when dragging and dropping files using the file explorer.
+    "explorer.confirmDragAndDrop": false,
 }
+

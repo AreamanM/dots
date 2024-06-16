@@ -6,18 +6,14 @@
 [[ $- != *i* ]] && return
 
 # Rust diff
-alias ls=eza
+alias ls='eza -stype'
 
-# Convenience thing
-#alias nvimfzf='nvim $(fzf)'
-
-# just testing
+# open a file in a project directory with fd and fzy
 alias nvimp='nvim $(fd | fzy -l15)'
 
 # This should be default
 HISTCONTROL=ignoredups
 
-#[ -d "$HOME/.dotnet/tools" ] && PATH="$HOME/.dotnet/tools:$PATH"
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 export PATH
 
@@ -32,12 +28,6 @@ export VISUAL=nvim
 
 eval "$(starship init bash)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-[ -f "/home/penguin/.ghcup/env" ] && source "/home/penguin/.ghcup/env" # ghcup-env
-
 eval "$(ssh-agent -s >/dev/null)"
 
-export GDK_DPI_SCALE=1.25
+# export GDK_DPI_SCALE=1.25

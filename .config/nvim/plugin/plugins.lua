@@ -1,5 +1,9 @@
 local packer = require("packer")
-local lsp_fts = {"rust", "python", "haskell", "cs", "tex"}
+-- local lsp_fts = {
+--   "rust", "python", "haskell", "cs", "tex", "go",
+--   "javascript", "typescript", "javascriptreact", "typescriptreact"
+-- }
+local lsp_fts = {"rust", "c", "cpp"}
 
 packer.startup({
   {
@@ -21,7 +25,7 @@ packer.startup({
 
     {
       "rebelot/kanagawa.nvim",
-      -- disable = true,
+      disable = true,
       config = function()
         local kanagawa = require('kanagawa')
         kanagawa.setup {
@@ -36,9 +40,16 @@ packer.startup({
     },
 
     {
+      "bluz71/vim-moonfly-colors",
+      -- disable = true,
+      config = function()
+        vim.cmd.colorscheme("moonfly")
+      end
+    },
+
+    {
       "nvim-treesitter/nvim-treesitter",
       event = "BufReadPre",
-      ft = {"c", "cpp", "lua", "rust", "haskell", "python", "cs", "markdown", "vimdoc"},
       config = function()
         require("nvim-treesitter.configs").setup {
           highlight = {enable = true}
@@ -58,7 +69,8 @@ packer.startup({
         local telescope = require("telescope")
         telescope.setup {
           defaults = {
-            layout_config = {preview_width = 50}
+            layout_config = {preview_width = 50},
+            file_ignore_patterns = {"node_modules"},
           }
         }
 
@@ -68,24 +80,19 @@ packer.startup({
 
     {
       "onsails/lspkind.nvim",
-      ft = lsp_fts
     },
 
     {
       "hrsh7th/cmp-nvim-lsp",
-      after = "lspkind.nvim"
     },
     
     {
       "L3MON4D3/LuaSnip",
-      after = "cmp-nvim-lsp",
-      -- ft = lsp_fts,
     },
 
     {
       "hrsh7th/nvim-cmp",
-      after = "LuaSnip",
-      requires = {{"saadparwaiz1/cmp_luasnip", after = 'nvim-cmp'}},
+      requires = {{"saadparwaiz1/cmp_luasnip", after = "nvim-cmp"}, "hrsh7th/cmp-nvim-lsp"},
       config = function()
         local cmp = require("cmp")
 
@@ -95,6 +102,11 @@ packer.startup({
               require("luasnip").lsp_expand(args.body)
             end,
           },
+          view = {
+            docs = {
+              auto_open = false
+            }
+          },
           window = {
             completion = cmp.config.window.bordered(),
             documentation = cmp.config.window.bordered(),
@@ -103,8 +115,10 @@ packer.startup({
             ["<C-b>"] = cmp.mapping.scroll_docs(-4),
             ["<C-f>"] = cmp.mapping.scroll_docs(4),
             ["<C-space>"] = cmp.mapping.complete(),
-            ["<C-e>"] = cmp.mapping.abort(),
+            ["<C-y>"] = cmp.mapping.abort(),
             ["<CR>"] = cmp.mapping.confirm({select = true}),
+            ["<C-d>"] = cmp.mapping.open_docs(),
+            ["<C-e"] = cmp.mapping.close_docs(),
           }),
           sources = cmp.config.sources({
             {name = "nvim_lsp"},
@@ -127,14 +141,14 @@ packer.startup({
 
     {
       "neovim/nvim-lspconfig",
-      after = "nvim-cmp",
+      --after = "nvim-cmp",
       config = function()
         vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
           vim.lsp.handlers.hover, {border = "single"})
         vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
             vim.lsp.handlers.signature_help, {border = "single" }) 
 
-        for _, server in pairs({"rust_analyzer", "pyright", "hls", "omnisharp", "texlab"}) do
+        for _, server in pairs({"rust_analyzer", "clangd"}) do
 
           require("lspconfig")[server].setup {
             capabilities = require("cmp_nvim_lsp").default_capabilities(),
@@ -148,7 +162,7 @@ packer.startup({
               vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer = bufnr})
               vim.keymap.set("n", "=", vim.lsp.buf.format, {buffer = bufnr})
 
-              vim.keymap.set("n", "gc", vim.lsp.buf.code_action, {buffer = bufnr})
+              vim.keymap.set("n", "gC", vim.lsp.buf.code_action, {buffer = bufnr})
 
               vim.keymap.set("n", "[g", vim.lsp.buf.implementation, {buffer = bufnr})
               vim.keymap.set("n", "[k", vim.lsp.buf.signature_help, {buffer = bufnr})
@@ -159,7 +173,6 @@ packer.startup({
 
               vim.keymap.set("n", "[R", vim.lsp.buf.references, {buffer = bufnr})
             end,
-            cmd = server == "omnisharp" and {"mono", "/home/penguin/.omnisharp/OmniSharp.exe"} or nil,
           }
         end
       end
@@ -179,7 +192,7 @@ packer.startup({
       config = function()
         require("lualine").setup {
           options = {
-            theme = "kanagawa",
+            theme = "moonfly",
             -- component_separators = { left = "", right = ""},
             --section_separators = { left = "", right = ""},
             globalstatus = true,

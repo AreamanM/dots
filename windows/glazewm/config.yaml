@@ -1,3 +1,6 @@
+general:
+  window_animations: "false"
+
 gaps:
   inner_gap: 20
   outer_gap: 20
@@ -8,10 +11,10 @@ bar:
   opacity: 1.0
   background: "#181616"
   foreground: "white"
-  font_family: "JetBrainsMono nerd font"
+  font_family: "Martian Mono, Symbols Nerd Font"
   font_size: "12"
   padding: "1 6 1 6"
-  font_weight: "400"
+  #font_weight: "400"
   component_separator:
     label: "  "
   components_left:
@@ -28,6 +31,14 @@ bar:
       # background: "#181616"
       
   components_right:
+    - type: "music"
+      label_not_playing: ""
+      label_paused: "Paused: {song_title}"
+      label_playing: "Now playing: {song_title}"
+      max_title_length: 20
+      max_artist_length: 20
+      foreground: "#c5c9c5"
+      background: "#181616"
   
     - type: "clock"
       time_formatting: " hh:mm tt"
@@ -47,7 +58,7 @@ bar:
       refresh_interval_ms: 1000
       foreground: "#c5c9c5"
       background: "#181616"
-      
+       
     - type: "volume"
       label_low: "volume: {volume_level}%"
       label_medium: "volume: {volume_level}%"
@@ -95,6 +106,10 @@ window_rules:
   # Some applications (eg. Steam) have borders that extend past the normal border size.
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "steam"
+
+  # Ignore WSL applications(and other remote desktop applications).
+  - command: "ignore"
+    match_process_name: "msrdc"
 
 keybindings:
   # Shift focus in a given direction.

@@ -46,7 +46,7 @@
     ],
     "centerOnLaunch": true,
     "confirmCloseAllTabs": false,
-    "defaultProfile": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+    "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
     "disableAnimations": true,
     "disabledProfileSources": 
     [
@@ -66,12 +66,13 @@
         "defaults": 
         {
             "bellStyle": "none",
-            "colorScheme": "Flexoki",
+            "colorScheme": "moonfly",
             "cursorShape": "filledBox",
             "font": 
             {
-                "face": "Input Mono, Hurmit Nerd Font",
-                "size": 14
+                "face": "Monaspace Neon Var, Symbols Nerd Font",
+				//"face": "Monaspace Neon Var, Symbols Nerd Font",
+                "size": 16
             },
             "intenseTextStyle": "all",
             "padding": "5",
@@ -89,23 +90,28 @@
                 "name": "Command Prompt"
             },
             {
-                "commandline": "wsl -d Arch -u penguin",
+                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
+                "hidden": true,
+                "name": "Visual Studio Debug Console",
+                "source": "VSDebugConsole"
+            },
+            {
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": true,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
                 "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
                 "hidden": false,
                 "name": "Arch",
                 "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "guid": "{25af60bc-658f-5084-b18c-e86cb85f33f1}",
-                "hidden": false,
-                "name": "Developer Command Prompt for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{dfa2a129-7a9a-5e1c-9c26-1ae1044271d6}",
-                "hidden": false,
-                "name": "Developer PowerShell for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
@@ -135,6 +141,29 @@
             "yellow": "#F9E2AF"
         },
         {
+            "background": "#100F0F",
+            "black": "#100F0F",
+            "blue": "#205EA6",
+            "brightBlack": "#575653",
+            "brightBlue": "#4385BE",
+            "brightCyan": "#3AA99F",
+            "brightGreen": "#879A39",
+            "brightPurple": "#8B7EC8",
+            "brightRed": "#D14D41",
+            "brightWhite": "#FFFCF0",
+            "brightYellow": "#D0A215",
+            "cursorColor": "#DAD8CE",
+            "cyan": "#24837B",
+            "foreground": "#E6E4D9",
+            "green": "#66800B",
+            "name": "Flexoki",
+            "purple": "#5E409D",
+            "red": "#AF3029",
+            "selectionBackground": "#CECDC3",
+            "white": "#F2F0E5",
+            "yellow": "#C19C00"
+        },
+        {
             "background": "#181616",
             "black": "#0D0C0C",
             "blue": "#8BA4B0",
@@ -157,29 +186,29 @@
             "white": "#C8C093",
             "yellow": "#C4B28A"
         },
-		{
-			"background": "#100F0F",
-			"black": "#100F0F",
-			"blue": "#205EA6",
-			"brightBlack": "#575653",
-			"brightBlue": "#4385BE",
-			"brightCyan": "#3AA99F",
-			"brightGreen": "#879A39",
-			"brightPurple": "#8B7EC8",
-			"brightRed": "#D14D41",
-			"brightWhite": "#FFFCF0",
-			"brightYellow": "#D0A215",
-			"cursorColor": "#DAD8CE",
-			"cyan": "#24837B",
-			"foreground": "#E6E4D9",
-			"green": "#66800B",
-			"name": "Flexoki",
-			"purple": "#5E409D",
-			"red": "#AF3029",
-			"selectionBackground": "#CECDC3",
-			"white": "#F2F0E5",
-			"yellow": "#C19C00"
-		},
+        {
+            "background": "#080808",
+            "black": "#323437",
+            "blue": "#80A0FF",
+            "brightBlack": "#949494",
+            "brightBlue": "#74B2FF",
+            "brightCyan": "#85DC85",
+            "brightGreen": "#36C692",
+            "brightPurple": "#AE81FF",
+            "brightRed": "#FF5189",
+            "brightWhite": "#E4E4E4",
+            "brightYellow": "#C6C684",
+            "cursorColor": "#9E9E9E",
+            "cyan": "#79DAC8",
+            "foreground": "#BDBDBD",
+            "green": "#8CC85F",
+            "name": "moonfly",
+            "purple": "#CF87E8",
+            "red": "#FF5454",
+            "selectionBackground": "#B2CEEE",
+            "white": "#C6C6C6",
+            "yellow": "#E3C78A"
+        }
     ],
     "themes": []
 }
